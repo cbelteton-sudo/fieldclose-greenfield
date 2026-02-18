@@ -1,18 +1,18 @@
-# Global owner (fallback)
+# Global owner
 *       @cbelteton-sudo
 
 # Backend / API
-/src/       @fieldclose-be
-/prisma/    @fieldclose-be
-/docker/    @fieldclose-do
+/src/       @cbelteton-sudo
+/prisma/    @cbelteton-sudo
+/docker/    @cbelteton-sudo
 
 # Frontend / Web
-/web/       @fieldclose-fe
+/web/       @cbelteton-sudo
 
 # DevOps / CI/CD
-/.github/   @fieldclose-do
-Dockerfile  @fieldclose-do
-docker-compose.yml @fieldclose-do
+/.github/   @cbelteton-sudo
+Dockerfile  @cbelteton-sudo
+docker-compose.yml @cbelteton-sudo
 
 # Specs
-/spec/      @fieldclose-qa @fieldclose-be @fieldclose-fe
+/spec/      @cbelteton-sudo
