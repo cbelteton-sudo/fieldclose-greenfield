@@ -1,0 +1,5 @@
+packages:
+  - "packages/*"
+  - "apps/*"
+  - "src" # Backend (legacy/flat structure per CODEOWNERS)
+  - "web" # Frontend (legacy/flat structure per CODEOWNERS)
