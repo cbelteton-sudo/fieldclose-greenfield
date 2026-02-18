@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  title: FieldClose API
+  version: 1.0.0
+servers:
+  - url: http://localhost:4010
+paths:
+  /auth/login:
+    post:
+      summary: Login user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Login successful. HttpOnly cookie 'fieldclose_sess' set.
+  /auth/refresh:
+    post:
+      summary: Refresh access token
+      responses:
+        "200":
+          description: Session refreshed. New httpOnly cookie set.
+  /auth/logout:
+    post:
+      summary: Logout user
+      responses:
+        "200":
+          description: Cookie cleared.
+  /auth/me:
+    get:
+      summary: Get current user profile
+      security:
+        - cookieAuth: []
+      responses:
+        "200":
+          description: User profile
+components:
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: fieldclose_sess
